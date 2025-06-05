@@ -25,33 +25,7 @@
                     <td>
                         <div class="text-center">{$mothertonguelist}</div>
                         <div class="text-left card-footer has-form" style="background-color:transparent;border-top:1px solid transparent">
-                            <div id="addmothertongueform" class="collapse mtl mlm" data-action='reset-on-collapse'>
-                                {$addmothertongueform|safe}
-                            </div>
-
-                            <div id="delmothertongueform" class="collapse mtl mlm" data-action='reset-on-collapse'>
-                                {$delmothertongueform|safe}
-                            </div>
-
-                            <button id="addmothertonguebutton" data-toggle="collapse" data-target="#addmothertongueform" aria-expanded="false" aria-controls="addmothertongueform" class="btn btn-secondary btn-sm collapsed expand-add-button">
-                                <span class="show-form">
-                                    <span class="icon icon-chevron-down prs"></span> {str tag='add'}
-                                </span>
-                                <span class="hide-form">
-                                    <span class="icon icon-chevron-up prs"></span> {str tag='cancel'}
-                                </span>
-                            </button>
-
-                            {if $mothertonguelist != ""}
-                            <button id="delmothertonguebutton" data-toggle="collapse" data-target="#delmothertongueform" aria-expanded="false" aria-controls="delmothertongueform" class="btn btn-secondary btn-sm collapsed expand-add-button">
-                                <span class="show-form">
-                                    <span class="icon icon-chevron-down prs"></span> {str tag='delete'}
-                                </span>
-                                <span class="hide-form">
-                                    <span class="icon icon-chevron-up prs"></span> {str tag='cancel'}
-                                </span>
-                            </button>
-                            {/if}
+                            <a href="{$WWWROOT}artefact/europass/element/edit.php?type=mothertongue" class="btn btn-secondary btn-sm" title="{str tag='add'}"><span class="icon icon-plus prs"></span> {str tag='add'}</a>
                         </div>
                     </td>
                 </tr>

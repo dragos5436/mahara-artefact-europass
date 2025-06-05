@@ -1498,6 +1498,11 @@ function get_personal_information($profilepic=false, $export=false, $userid=null
                     $data[$key] = $value;
                 }
             }
+
+            if (!empty($data['country'])) {
+            $country_code = strtolower($data['country']);
+            $data['countryname']   = 'country.' . $country_code;
+            }
         }
     }
     // Construct user's portfolio URL address
@@ -1747,7 +1752,8 @@ function get_mother_tongues($export=false, $lang=null, $userid=null) {
     // Add translated language name for each mother tongue
     if (is_array($data)){
     foreach ((array)$data as $language) {
-        $language->label = get_string_from_language($lang, 'language.' . $language->description, 'artefact.europass');
+        $language->languagetag = 'language.' . $language->description;
+        $language->label = get_string_from_language($lang, $language->languagetag, 'artefact.europass');
     }
 }
 

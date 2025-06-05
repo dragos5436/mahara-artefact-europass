@@ -239,7 +239,7 @@ table.info-table tr.info-table-footer {
 			</table>
 			<br />
 			<div class="skill">{$text.otherdigitalcompetences}</div>
-			<div class="details">{$skills.digital->description|safe}</div>
+			<div class="details">{$skills.digital->description|raw}</div>
 		</p>
 
 		<br /><h3>{$text.skills}</h3>
@@ -247,34 +247,34 @@ table.info-table tr.info-table-footer {
 		{if !empty($skills.skills.socialskill.desc)}
 		<p class="entry">
 			<div class="skill">{$text.communicationskill}</div>
-			<div class="details">{$skills.skills.socialskill.desc|safe}</div>
+			<div class="details">{$skills.skills.socialskill.desc|raw}</div>
 		</p>
 		{/if}
 
 		{if !empty($skills.skills.organisationalskill.desc)}
 		<p class="entry">
 			<div class="skill">{$text.organisationalskill}</div>
-			<div class="details">{$skills.skills.organisationalskill.desc|safe}</div>
+			<div class="details">{$skills.skills.organisationalskill.desc|raw}</div>
 		</p>
 		{/if}
 
 		{if !empty($skills.skills.technicalskill.desc)}
 		<p class="entry">
 			<div class="skill">{$text.jobrelatedskill}</div>
-			<div class="details">{$skills.skills.technicalskill.desc|safe}</div>
+			<div class="details">{$skills.skills.technicalskill.desc|raw}</div>
 		</p>
 		{/if}
 
 		{if !empty($skills.skills.otherskill.desc)}
 		<p class="entry">
 			<div class="skill">{$text.otherskill}</div>
-			<div class="details">{$skills.skills.otherskill.desc|safe}</div>
+			<div class="details">{$skills.skills.otherskill.desc|raw}</div>
 		</p>
 		{/if}
 
 		{if !empty($skills.skills.drivinglicence.desc)}
 		<p class="entry">
-			<div class="label"><b>{$text.drivinglicence}</b> {$skills.skills.drivinglicence.desc|safe}</div>
+			<div class="label"><b>{$text.drivinglicence}</b> {$skills.skills.drivinglicence.desc|raw}</div>
 		</p>
 		{/if}
 
@@ -283,7 +283,7 @@ table.info-table tr.info-table-footer {
 		{foreach from=$additionalinfo item=item}
 		<p class="entry">
 			<div class="skill">{$item->label}</div>
-			<div class="details">{$item->description|safe}</div>
+			<div class="details">{$item->description|raw}</div>
 		</p>
 		{/foreach}
 

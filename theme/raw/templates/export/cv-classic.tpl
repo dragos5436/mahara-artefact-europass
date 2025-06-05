@@ -216,7 +216,7 @@ table#profile-content {
 			<td></td>
 			<td>
 				<div class="skill">{$text.otherdigitalcompetences}</div>
-				<div class="details">{$skills.digital->description|safe}</div>
+				<div class="details">{$skills.digital->description|raw}</div>
 			</td>
 		</tr>
 
@@ -230,7 +230,7 @@ table#profile-content {
 			<td></td>
 			<td>
 				<div class="skill">{$text.communicationskill}</div>
-				<div class="details">{$skills.skills.socialskill.desc|safe}</div>
+				<div class="details">{$skills.skills.socialskill.desc|raw}</div>
 			</td>
 		</tr>
 		{/if}
@@ -240,7 +240,7 @@ table#profile-content {
 			<td></td>
 			<td>
 				<div class="skill">{$text.organisationalskill}</div>
-				<div class="details">{$skills.skills.organisationalskill.desc|safe}</div>
+				<div class="details">{$skills.skills.organisationalskill.desc|raw}</div>
 			</td>
 		</tr>
 		{/if}
@@ -250,7 +250,7 @@ table#profile-content {
 			<td></td>
 			<td>
 				<div class="skill">{$text.jobrelatedskill}</div>
-				<div class="details">{$skills.skills.technicalskill.desc|safe}</div>
+				<div class="details">{$skills.skills.technicalskill.desc|raw}</div>
 			</td>
 		</tr>
 		{/if}
@@ -260,7 +260,7 @@ table#profile-content {
 			<td></td>
 			<td>
 				<div class="skill">{$text.otherskill}</div>
-				<div class="details">{$skills.skills.otherskill.desc|safe}</div>
+				<div class="details">{$skills.skills.otherskill.desc|raw}</div>
 			</td>
 		</tr>
 		{/if}
@@ -269,7 +269,7 @@ table#profile-content {
 		<tr valign="top">
 			<td></td>
 			<td>
-				<div class="label"><b>{$text.drivinglicence}</b> {$skills.skills.drivinglicence.desc|safe}</div>
+				<div class="label"><b>{$text.drivinglicence}</b> {$skills.skills.drivinglicence.desc|raw}</div>
 			</td>
 		</tr>
 		{/if}
@@ -284,7 +284,7 @@ table#profile-content {
 			<td></td>
 			<td>
 				<div class="skill">{$item->label}</div>
-				<div class="details">{$item->description|safe}</div>
+				<div class="details">{$item->description|raw}</div>
 			</td>
 		</tr>
 		{/foreach}

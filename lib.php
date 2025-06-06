@@ -1793,7 +1793,8 @@ function get_other_languages($export=false, $lang=null, $userid=null) {
     }
     // Add translated language name for each other language
     foreach ($data as $language) {
-        $language->label = get_string_from_language($lang, 'language.' . $language->language, 'artefact.europass');
+        $language->languagetag = 'language.' . $language->description;
+        $language->label = get_string_from_language($lang, $language->languagetag, 'artefact.europass');
     }
 
     // Add language certificate and experience info to each language
